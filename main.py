@@ -12,22 +12,23 @@ from models.ReportRequest import ReportRequest
 
 app = FastAPI()
 
-# CORS middleware setup
-origins = [
-    "http://localhost:5500",
-    "http://localhost:80",
-    "http://92.38.241.219:5500",
-    "http://92.38.241.219:80",
-    "http://3463627-cq44749.twc1.net/",
-]
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+async def read_root():
+    return {"message": "Hello World"}
+
 
 
 @app.post("/report/")
