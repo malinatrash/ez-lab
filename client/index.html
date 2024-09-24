@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Report Generator</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+	<div class="container">
+		<h1>Ez Lab</h1>
+		<form id="reportForm">
+			<label for="institute">Институт:</label>
+			<input type="text" id="institute" name="institute" required>
+
+			<label for="podr">Подразделение:</label>
+			<input type="text" id="podr" name="podr" required>
+
+			<label for="group">Группа:</label>
+			<input type="text" id="group" name="group" required>
+
+			<label for="fio">ФИО:</label>
+			<input type="text" id="fio" name="fio" required>
+
+			<label for="fio_prepod">ФИО Преподавателя:</label>
+			<input type="text" id="fio_prepod" name="fio_prepod" required>
+
+			<label for="role">Должность:</label>
+			<input type="text" id="role" name="role" required>
+
+			<label for="work_type">Тип Работы:</label>
+			<input type="text" id="work_type" name="work_type" required>
+
+			<label for="discipline">Дисциплина:</label>
+			<input type="text" id="discipline" name="discipline" required>
+
+			<label for="topic">Тема:</label>
+			<input type="text" id="topic" name="topic" required>
+
+			<label for="chapters">Главы (через запятую):</label>
+			<input type="text" id="chapters" name="chapters" required>
+
+			<button type="submit">Сгенерировать отчет</button>
+		</form>
+
+		<div id="result"></div>
+	</div>
+
+	<script src="index.js"></script>
+</body>
+
+</html>
